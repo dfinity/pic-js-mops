@@ -17,7 +17,6 @@ export interface StartServerOptions {
    */
   ttl?: number;
 
-
   /**
    * Path to the PocketIC binary.
    */

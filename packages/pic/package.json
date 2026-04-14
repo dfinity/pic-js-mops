@@ -21,11 +21,13 @@
   ],
   "files": [
     "dist",
-    "src"
+    "src",
+    "postinstall.mjs"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "postinstall": "node ./postinstall.mjs",
     "prepublishOnly": "tsc -p ./tsconfig.json"
   },
   "dependencies": {

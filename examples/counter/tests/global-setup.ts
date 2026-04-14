@@ -1,5 +1,5 @@
 import type { GlobalSetupContext } from 'vitest/node';
-import { PocketIcServer } from '@dfinity/pic';
+import { PocketIcServer } from 'pic-js-mops';
 
 let pic: PocketIcServer | undefined;
 

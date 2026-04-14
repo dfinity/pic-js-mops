@@ -1,6 +1,6 @@
 {
   "name": "nns-proxy-tests",
   "devDependencies": {
-    "@dfinity/pic": "workspace:*"
+    "pic-js-mops": "workspace:*"
   }
 }

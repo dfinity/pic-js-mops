@@ -321,13 +321,13 @@ export interface SetupCanisterOptions extends CreateCanisterOptions {
    * If a string is passed, it is treated as a path to a file.
    * If an `ArrayBufferLike` is passed, it is treated as the WASM module itself.
    */
-  wasm: ArrayBufferLike | string;
+  wasm: Uint8Array | ArrayBuffer | string;
 
   /**
    * Candid encoded argument to pass to the canister's init function.
    * Defaults to an empty ArrayBuffer.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The principal to setup the canister as.
@@ -489,13 +489,13 @@ export interface InstallCodeOptions {
    * If a string is passed, it is treated as a path to a file.
    * If an `ArrayBufferLike` is passed, it is treated as the WASM module itself.
    */
-  wasm: ArrayBufferLike | string;
+  wasm: Uint8Array | ArrayBuffer | string;
 
   /**
    * Candid encoded argument to pass to the canister's init function.
    * Defaults to an empty ArrayBuffer.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The principal to install the code as.
@@ -527,12 +527,12 @@ export interface ReinstallCodeOptions {
    * If a string is passed, it is treated as a path to a file.
    * If an `ArrayBufferLike` is passed, it is treated as the WASM module itself.
    */
-  wasm: ArrayBufferLike | string;
+  wasm: Uint8Array | ArrayBuffer | string;
 
   /**
    * Candid encoded argument to pass to the canister's init function.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The Principal to send the request as.
@@ -559,12 +559,12 @@ export interface UpgradeCanisterOptions {
    * If a string is passed, it is treated as a path to a file.
    * If an `ArrayBufferLike` is passed, it is treated as the WASM module itself.
    */
-  wasm: ArrayBufferLike | string;
+  wasm: Uint8Array | ArrayBuffer | string;
 
   /**
    * Candid encoded argument to pass to the canister's init function.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The Principal to send the request as.
@@ -624,7 +624,7 @@ export interface QueryCallOptions {
    * A Candid encoded argument to pass to the canister's method.
    * Defaults to an empty ArrayBuffer.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The ID of the subnet that the canister resides on.
@@ -660,7 +660,7 @@ export interface UpdateCallOptions {
    * A Candid encoded argument to pass to the canister's method.
    * Defaults to an empty ArrayBuffer.
    */
-  arg?: ArrayBufferLike;
+  arg?: Uint8Array | ArrayBuffer;
 
   /**
    * The ID of the subnet that the canister resides on.

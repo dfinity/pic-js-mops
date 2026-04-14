@@ -1,4 +1,4 @@
-import { PocketIcServer } from '@dfinity/pic';
+import { PocketIcServer } from 'pic-js-mops';
 
 module.exports = async function (): Promise<void> {
   const pic = await PocketIcServer.start({

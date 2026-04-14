@@ -2,6 +2,6 @@
   "name": "counter-tests",
   "type": "module",
   "devDependencies": {
-    "@dfinity/pic": "workspace:*"
+    "pic-js-mops": "workspace:*"
   }
 }
