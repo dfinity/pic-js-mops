@@ -6,7 +6,9 @@ export function optional<T>(value: T | undefined | null): [] | [T] {
 }
 
 export function decodeCandid<T>(types: IDL.Type[], data: Uint8Array): T | null {
-  const returnValues = IDL.decode(types, data);
+  const buffer = new ArrayBuffer(data.byteLength);
+  new Uint8Array(buffer).set(data);
+  const returnValues = IDL.decode(types, buffer);
 
   switch (returnValues.length) {
     case 0:

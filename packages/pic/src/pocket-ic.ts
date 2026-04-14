@@ -677,7 +677,7 @@ export class PocketIc {
     arg = new Uint8Array(),
     sender = Principal.anonymous(),
     targetSubnetId,
-  }: QueryCallOptions): Promise<ArrayBufferLike> {
+  }: QueryCallOptions): Promise<Uint8Array> {
     const res = await this.client.queryCall({
       canisterId,
       method,
@@ -730,7 +730,7 @@ export class PocketIc {
     arg = new Uint8Array(),
     sender = Principal.anonymous(),
     targetSubnetId,
-  }: UpdateCallOptions): Promise<ArrayBufferLike> {
+  }: UpdateCallOptions): Promise<Uint8Array> {
     const res = await this.client.updateCall({
       canisterId,
       method,
@@ -1055,7 +1055,7 @@ export class PocketIc {
    * await picServer.stop();
    * ```
    */
-  public async getPubKey(subnetId: Principal): Promise<ArrayBufferLike> {
+  public async getPubKey(subnetId: Principal): Promise<Uint8Array> {
     return await this.client.getPubKey({ subnetId });
   }
 
@@ -1288,7 +1288,7 @@ export class PocketIc {
    */
   public async setStableMemory(
     canisterId: Principal,
-    stableMemory: ArrayBufferLike,
+    stableMemory: Uint8Array | ArrayBuffer,
   ): Promise<void> {
     const { blobId } = await this.client.uploadBlob({
       blob: new Uint8Array(stableMemory),
@@ -1321,9 +1321,7 @@ export class PocketIc {
    * await picServer.stop();
    * ```
    */
-  public async getStableMemory(
-    canisterId: Principal,
-  ): Promise<ArrayBufferLike> {
+  public async getStableMemory(canisterId: Principal): Promise<Uint8Array> {
     const { blob } = await this.client.getStableMemory({ canisterId });
 
     return blob;

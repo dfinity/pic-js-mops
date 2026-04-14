@@ -32,7 +32,7 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.13.10
+        specifier: 22.13.10
         version: 22.13.10
       bip39:
         specifier: ^3.1.0
@@ -53,7 +53,7 @@ importers:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.13.10)(typescript@5.8.2)
       typescript:
-        specifier: ^5.8.2
+        specifier: 5.8.2
         version: 5.8.2
       vitest:
         specifier: ^2.1.9
@@ -151,7 +151,7 @@ importers:
     dependencies:
       '@icp-sdk/core':
         specifier: ^4.0.0
-        version: 4.2.3(@dfinity/agent@2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/identity-secp256k1@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/curves@1.9.7)(@noble/hashes@1.8.0))(@dfinity/identity@2.3.0(@dfinity/agent@2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)
+        version: 4.2.3(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/identity-secp256k1@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/curves@1.9.7)(@noble/hashes@1.8.0))(@dfinity/identity@2.3.0(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)
       bip39:
         specifier: ^3.1.0
         version: 3.1.0
@@ -7301,6 +7301,14 @@ snapshots:
       '@noble/hashes': 1.7.1
       borc: 2.1.2
 
+  '@dfinity/identity@2.3.0(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/principal@2.3.0)':
+    dependencies:
+      '@dfinity/agent': 3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0)
+      '@dfinity/principal': 2.3.0
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      borc: 2.1.2
+
   '@dfinity/principal@2.3.0':
     dependencies:
       '@noble/hashes': 1.7.1
@@ -8068,11 +8076,11 @@ snapshots:
     dependencies:
       '@hapi/hoek': 9.3.0
 
-  '@icp-sdk/core@4.2.3(@dfinity/agent@2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/identity-secp256k1@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/curves@1.9.7)(@noble/hashes@1.8.0))(@dfinity/identity@2.3.0(@dfinity/agent@2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)':
+  '@icp-sdk/core@4.2.3(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/identity-secp256k1@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/curves@1.9.7)(@noble/hashes@1.8.0))(@dfinity/identity@2.3.0(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)':
     dependencies:
-      '@dfinity/agent': 2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)
+      '@dfinity/agent': 3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0)
       '@dfinity/candid': 2.3.0(@dfinity/principal@2.3.0)
-      '@dfinity/identity': 2.3.0(@dfinity/agent@2.3.0(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)
+      '@dfinity/identity': 2.3.0(@dfinity/agent@3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/hashes@1.8.0))(@dfinity/principal@2.3.0)
       '@dfinity/identity-secp256k1': 3.4.3(@dfinity/candid@2.3.0(@dfinity/principal@2.3.0))(@dfinity/principal@2.3.0)(@noble/curves@1.9.7)(@noble/hashes@1.8.0)
       '@dfinity/principal': 2.3.0
 
@@ -8740,7 +8748,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.13.10
 
   '@types/scheduler@0.16.8': {}
 
