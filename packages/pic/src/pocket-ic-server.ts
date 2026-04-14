@@ -70,7 +70,12 @@ export class PocketIcServer {
     const picFilePrefix = `pocket_ic_${pid}`;
     const portFilePath = tmpFile(`${picFilePrefix}.port`);
 
-    const serverProcess = spawn(binPath, ['--port-file', portFilePath, '--ttl', options.ttl ? options.ttl.toString() : '60']);
+    const serverProcess = spawn(binPath, [
+      '--port-file',
+      portFilePath,
+      '--ttl',
+      options.ttl ? options.ttl.toString() : '60',
+    ]);
 
     if (options.showRuntimeLogs) {
       serverProcess.stdout.pipe(process.stdout);
@@ -133,8 +138,8 @@ export class PocketIcServer {
       this.serverProcess.kill();
 
       const picFilePrefix = `pocket_ic_${process.ppid}`;
-      rmSync(tmpFile(`${picFilePrefix}.port`), {force: true});
-      rmSync(tmpFile(`${picFilePrefix}.ready`), {force: true});
+      rmSync(tmpFile(`${picFilePrefix}.port`), { force: true });
+      rmSync(tmpFile(`${picFilePrefix}.ready`), { force: true });
     });
   }
 
