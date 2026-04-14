@@ -4,7 +4,7 @@ import {
   PocketIc,
   SubnetStateType,
   generateRandomIdentity,
-} from '@dfinity/pic';
+} from 'pic-js-mops';
 import { _SERVICE, idlFactory } from '../../declarations/nns_proxy.did';
 import { Governance } from './support/governance';
 

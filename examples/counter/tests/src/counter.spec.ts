@@ -1,6 +1,6 @@
 import { resolve } from 'node:path';
 import { Principal } from '@dfinity/principal';
-import { Actor, PocketIc } from '@dfinity/pic';
+import { Actor, PocketIc } from 'pic-js-mops';
 import { IDL } from '@dfinity/candid';
 import { describe, beforeEach, afterEach, it, expect, inject } from 'vitest';
 

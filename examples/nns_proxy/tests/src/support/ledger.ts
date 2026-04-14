@@ -1,6 +1,6 @@
 import { AnonymousIdentity, Identity } from '@dfinity/agent';
 import { Principal } from '@dfinity/principal';
-import { Actor, PocketIc } from '@dfinity/pic';
+import { Actor, PocketIc } from 'pic-js-mops';
 import {
   _SERVICE as LedgerService,
   SubAccount,

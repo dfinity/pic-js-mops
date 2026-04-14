@@ -1,6 +1,6 @@
 import { resolve } from 'node:path';
 import { Principal } from '@dfinity/principal';
-import { Actor, generateRandomIdentity, PocketIc } from '@dfinity/pic';
+import { Actor, generateRandomIdentity, PocketIc } from 'pic-js-mops';
 import { Identity } from '@dfinity/agent';
 
 import { _SERVICE, idlFactory } from '../../declarations/clock.did';

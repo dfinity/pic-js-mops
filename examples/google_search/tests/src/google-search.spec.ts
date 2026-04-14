@@ -1,6 +1,6 @@
 import { resolve } from 'node:path';
 import { Principal } from '@dfinity/principal';
-import { PocketIc, DeferredActor } from '@dfinity/pic';
+import { PocketIc, DeferredActor } from 'pic-js-mops';
 
 import { _SERVICE, idlFactory } from '../../declarations/google_search.did';
 
