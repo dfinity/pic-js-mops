@@ -37,6 +37,9 @@ jobs:
       - name: Download PocketIC binary
         run: node packages/pic/postinstall.mjs
 
+      - name: Extract NNS state
+        run: tar -xvf examples/nns_proxy/tests/state/nns_state.tar.xz -C examples/nns_proxy/tests/state
+
       - name: Setup DFX
         uses: dfinity/setup-dfx@e50c04f104ee4285ec010f10609483cf41e4d365 # main
         with:
@@ -72,6 +75,9 @@ jobs:
 
       - name: Download PocketIC binary
         run: node packages/pic/postinstall.mjs
+
+      - name: Extract NNS state
+        run: tar -xvf examples/nns_proxy/tests/state/nns_state.tar.xz -C examples/nns_proxy/tests/state
 
       - name: Setup DFX
         uses: dfinity/setup-dfx@e50c04f104ee4285ec010f10609483cf41e4d365 # main
