@@ -8,7 +8,7 @@ import {
   idlFactory,
 } from '../test-canister/declarations/test_canister.did';
 
-const WASM_PATH = path.resolve(
+export const WASM_PATH = path.resolve(
   __dirname,
   '..',
   'test-canister',

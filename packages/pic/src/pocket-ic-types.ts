@@ -387,6 +387,11 @@ export interface CanisterSettings {
    * The reserved cycles limit of the canister.
    */
   reservedCyclesLimit?: bigint;
+
+  /**
+   * The Wasm memory limit of the canister in bytes.
+   */
+  wasmMemoryLimit?: bigint;
 }
 
 /**

@@ -10,6 +10,7 @@ export interface CanisterSettings {
   memory_allocation: [] | [bigint];
   freezing_threshold: [] | [bigint];
   reserved_cycles_limit: [] | [bigint];
+  wasm_memory_limit: [] | [bigint];
 }
 
 export const CanisterSettings = IDL.Record({
@@ -18,6 +19,7 @@ export const CanisterSettings = IDL.Record({
   memory_allocation: IDL.Opt(IDL.Nat),
   freezing_threshold: IDL.Opt(IDL.Nat),
   reserved_cycles_limit: IDL.Opt(IDL.Nat),
+  wasm_memory_limit: IDL.Opt(IDL.Nat),
 });
 
 export interface CreateCanisterRequest {

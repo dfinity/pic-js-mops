@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Feat
+
+- add support for configuring a canister's Wasm memory limit
+
 ### Fix
 
 - state copy to not include parent folder (#134)

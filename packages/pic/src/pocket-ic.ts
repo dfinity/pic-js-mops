@@ -159,6 +159,7 @@ export class PocketIc {
     targetCanisterId,
     targetSubnetId,
     reservedCyclesLimit,
+    wasmMemoryLimit,
   }: SetupCanisterOptions): Promise<CanisterFixture<T>> {
     const canisterId = await this.createCanister({
       computeAllocation,
@@ -167,6 +168,7 @@ export class PocketIc {
       freezingThreshold,
       memoryAllocation,
       reservedCyclesLimit,
+      wasmMemoryLimit,
       targetCanisterId,
       targetSubnetId,
       sender,
@@ -210,6 +212,7 @@ export class PocketIc {
     freezingThreshold,
     memoryAllocation,
     reservedCyclesLimit,
+    wasmMemoryLimit,
     targetCanisterId,
     targetSubnetId,
   }: CreateCanisterOptions = {}): Promise<Principal> {
@@ -221,6 +224,7 @@ export class PocketIc {
           memory_allocation: optional(memoryAllocation),
           freezing_threshold: optional(freezingThreshold),
           reserved_cycles_limit: optional(reservedCyclesLimit),
+          wasm_memory_limit: optional(wasmMemoryLimit),
         },
       ],
       amount: [cycles],
@@ -536,6 +540,7 @@ export class PocketIc {
     freezingThreshold,
     memoryAllocation,
     reservedCyclesLimit,
+    wasmMemoryLimit,
     sender = Principal.anonymous(),
   }: UpdateCanisterSettingsOptions): Promise<void> {
     const payload = encodeUpdateCanisterSettingsRequest({
@@ -546,6 +551,7 @@ export class PocketIc {
         memory_allocation: optional(memoryAllocation),
         freezing_threshold: optional(freezingThreshold),
         reserved_cycles_limit: optional(reservedCyclesLimit),
+        wasm_memory_limit: optional(wasmMemoryLimit),
       },
     });
 
